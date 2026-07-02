@@ -1,0 +1,121 @@
+# ResuMind AI: Production-Ready Full-Stack Resume Analyzer
+
+Welcome to **ResuMind AI**, a premium, production-ready full-stack SaaS application that parses resumes (PDF/DOCX) using Google Gemini 1.5, calculates real-time ATS compatibility scores, aggregates skill-gap matrices, generates customized step-by-step learning roadmaps, and features recruiter telemetry dashboards.
+
+This application is built to run flawlessly in local development sandbox mode with local mock database/storage fallbacks out-of-the-box, yet it is fully wired for direct production deployments on Google Cloud Run, Cloud Storage, and Firestore.
+
+---
+
+## ⚡ Core Highlights
+* **Gemini 1.5 Core Integration**: Performs instant textual parsing, structured JSON mappings, and evaluates skill criteria against 5 core engineering profiles.
+* **Vibrant SaaS User Interface**: Built on React 19 and Tailwind CSS with custom glassmorphism panels, circular progress trackers, responsive mobile navigation, and interactive skill roadmap checklists.
+* **Visual Telemetry Dashboards**: Utilizes Recharts to build stunning Area, Bar, and Radar charts for candidate competency visualizers.
+* **Double-Path Cloud Engineering**: 
+  - **Database**: Connects directly to GCP Firestore, falling back to a local JSON database schema (`db.json`) if offline.
+  - **Object Storage**: Streams resumes directly to Google Cloud Storage (GCS), falling back to local multi-format file directories if offline.
+  - **Auth**: Authenticates tokens using Firebase Authentication, supporting an interactive local simulation fallback for rapid testing.
+* **Production Containerization**: Multi-stage docker files compiling React assets into Nginx servers and launching Flask through Gunicorn.
+
+---
+
+## 📁 System Architecture & Directory Tree
+For a deep dive into schemas, Mermaid data flows, and IAM permissions, see the [ResuMind System Architecture Guide](file:///Users/cnaresh/.gemini/antigravity/brain/d60822b8-8351-40de-a80d-014fa649429c/resumind_architecture.md).
+
+```
+cloud-basic/
+├── backend/                  # Python Flask WSGI API Server
+│   ├── services/
+│   │   ├── db_service.py     # Firestore database service (with JSON fallback)
+│   │   ├── gemini_service.py # Gemini AI analyzer & document text extractor
+│   │   └── storage_service.py# GCS file repository service (with local disk fallback)
+│   ├── app.py                # Main API router and JWT authentication controller
+│   ├── Dockerfile            # Python 3.11 Slim Gunicorn container script
+│   └── requirements.txt      # Python dependencies (pypdf, google-generativeai, etc.)
+├── frontend/                 # React 19 + Tailwind CSS + Vite
+│   ├── src/
+│   │   ├── App.jsx           # Master dashboard page with Recharts & Firebase
+│   │   ├── firebase.js       # Firebase client config & sign-in wrappers
+│   │   └── index.css         # Custom typography and glassmorphism styles
+│   ├── Dockerfile            # Multi-stage compilation Nginx container script
+│   └── tailwind.config.js    # Custom Tailwind variables and animations
+└── docker-compose.yml        # Multi-container local orchestration coordinator
+```
+
+---
+
+## 🚀 Quick Start: Running in Local Docker Sandbox
+Ensure you have Docker and Docker Compose installed.
+
+1. **Clone/Open the workspace** inside your terminal.
+2. **Execute build and launch**:
+   ```bash
+   docker-compose up --build
+   ```
+3. **Open the browser**:
+   - **Frontend application**: [http://localhost](http://localhost) (Nginx Web Server)
+   - **Backend API Server**: [http://localhost:5000/api/health](http://localhost:5000/api/health) (Gunicorn WSGI)
+
+*Note: In Docker mode, the application runs inside the sandbox with local database fallbacks automatically, giving you a zero-configuration sandbox experience.*
+
+---
+
+## 🛠️ Step-by-Step Manual Setup (Local Development)
+
+If you prefer to run the components independently on your system, follow these steps:
+
+### Part 1: Backend API Setup (Python)
+1. **Navigate to the backend directory**:
+   ```bash
+   cd backend
+   ```
+2. **Create and activate a Python virtual environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Configure environment settings**:
+   Copy the example environment file and add your credentials:
+   ```bash
+   cp .env.example .env
+   ```
+   *Modify `.env` to include your `GEMINI_API_KEY` (Get a key from [Google AI Studio](https://aistudio.google.com/)). Leave other GCP keys blank to run in sandbox simulation mode!*
+5. **Run the Flask server**:
+   ```bash
+   python app.py
+   ```
+   *The backend will boot on [http://localhost:5000](http://localhost:5000).*
+
+---
+
+### Part 2: Frontend Client Setup (React)
+1. **Navigate to the frontend directory**:
+   ```bash
+   cd ../frontend
+   ```
+2. **Install node packages**:
+   ```bash
+   npm install
+   ```
+3. **Configure environment settings**:
+   ```bash
+   cp .env.example .env
+   ```
+   *The default configuration targets `http://localhost:5000/api`. If you want to connect to a real Firebase Authentication project, enter your config keys in this file.*
+4. **Run Vite development server**:
+   ```bash
+   npm run dev
+   ```
+   *The client dashboard will launch on [http://localhost:5173](http://localhost:5173).*
+
+---
+
+## 🔒 Simulated vs. Live Cloud Configuration
+
+ResuMind AI operates in **Sandbox Sandbox mode** by default when local credentials are blank, making it highly accessible for reviewers.
+
+* **Simulation Sandbox Mode**: You can click **"Instant sandbox preview"** on the login card, or enter any email/password. The frontend will authenticate you locally. If you upload a PDF or DOCX file, the backend will parse it, automatically generate an extremely high-fidelity Gemini AI matching profile locally, and update your interactive dashboard!
+* **Live GCP Mode**: Input real Firebase client keys in `frontend/.env` and standard GCP / Gemini environment variables in `backend/.env`. The application will immediately switch to live operations: creating actual records in Firestore, writing PDFs into Cloud Storage, and requesting structured analysis reports directly from live Gemini AI APIs!
