@@ -1,0 +1,398 @@
+{
+  "resumes": [
+    {
+      "userId": "simulated_user_123",
+      "userEmail": "developer@example.com",
+      "filename": "resume2.pdf",
+      "fileUrl": "local://uploads/simulated_user_123_1782971498_resume2.pdf",
+      "atsScore": 69,
+      "timestamp": "2026-07-02T05:51:41.831793",
+      "parsedData": {
+        "name": "Anonymous Candidate",
+        "email": "Not Provided",
+        "phone": "Not Provided",
+        "education": [
+          {
+            "degree": "B.S. in Computer Science",
+            "institution": "State University",
+            "year": "2023"
+          }
+        ],
+        "skills": [
+          "Software Development",
+          "Communication",
+          "Problem Solving"
+        ],
+        "certifications": [
+          "Google IT Automation Certificate",
+          "Core Technical Foundations"
+        ],
+        "projects": [
+          {
+            "name": "Cloud Integrations Hub",
+            "description": "Developed an open-source integrations platform using Software Development to sync multi-cloud storage pipelines."
+          }
+        ],
+        "experience": [
+          {
+            "role": "Full Stack Developer",
+            "company": "Tech Solutions Inc.",
+            "duration": "2022 - Present",
+            "description": "Led full-stack application development using Software Development, Communication, Problem Solving. Improved backend query response time by 25%."
+          }
+        ]
+      },
+      "analysis": {
+        "summary": "The candidate profile parses as a developing technical specialist. Based on the CV text, they show foundational and active competencies in programming environments (such as Software Development, Communication, Problem Solving). To maximize conversion in the recruitment pipeline for Software Engineer, the candidate must address specific missing keywords, integrate robust unit testing protocols, and highlight continuous integration practices.",
+        "strengths": [
+          "Foundational coding principles are present in the provided CV.",
+          "Highlighted academic projects demonstrate good practical coding application.",
+          "Excellent alignment with foundational technologies required for the Software Engineer ecosystem."
+        ],
+        "weaknesses": [
+          "Missing core competencies required for target position: JavaScript, React.js, Node.js.",
+          "Could emphasize testing protocols, unit test implementation, and CI/CD pipelines to raise matching ranks."
+        ],
+        "missingSkills": [
+          "JavaScript",
+          "React.js",
+          "Node.js",
+          "HTML/CSS",
+          "TypeScript",
+          "Git"
+        ],
+        "industryRecommendations": "Prioritize structural integrations and testing suites. Adopt TypeScript or Cloud architecture frameworks to raise your marketability for standard Software Engineer workflows.",
+        "keywordOptimization": [
+          {
+            "keyword": "JavaScript",
+            "impact": "High",
+            "description": "Incorporate the term 'JavaScript' within your experience or projects section to clear modern ATS keyword indices."
+          },
+          {
+            "keyword": "React.js",
+            "impact": "Medium",
+            "description": "Incorporate the term 'React.js' within your experience or projects section to clear modern ATS keyword indices."
+          },
+          {
+            "keyword": "Node.js",
+            "impact": "High",
+            "description": "Incorporate the term 'Node.js' within your experience or projects section to clear modern ATS keyword indices."
+          },
+          {
+            "keyword": "HTML/CSS",
+            "impact": "Medium",
+            "description": "Incorporate the term 'HTML/CSS' within your experience or projects section to clear modern ATS keyword indices."
+          }
+        ]
+      },
+      "roleMatch": {
+        "software-engineer": {
+          "matchPercentage": 35,
+          "missingSkills": [
+            "JavaScript",
+            "React.js",
+            "Node.js",
+            "HTML/CSS",
+            "TypeScript",
+            "Git"
+          ],
+          "roadmap": [
+            {
+              "step": 1,
+              "title": "Master JavaScript Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "title": "Modern React Hooks & Context API",
+              "resource": "Official React Documentation",
+              "duration": "1 week",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "title": "Master Node.js Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 4,
+              "title": "Master HTML/CSS Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 5,
+              "title": "Learn Static Typing with TypeScript",
+              "resource": "TypeScript Handbook & Egghead.io",
+              "duration": "1 week",
+              "completed": false
+            },
+            {
+              "step": 6,
+              "title": "Master Git Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            }
+          ]
+        },
+        "cloud-engineer": {
+          "matchPercentage": 35,
+          "missingSkills": [
+            "AWS",
+            "Google Cloud (GCP)",
+            "Microsoft Azure",
+            "Docker",
+            "Kubernetes",
+            "Terraform",
+            "Linux"
+          ],
+          "roadmap": [
+            {
+              "step": 1,
+              "title": "Master AWS Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "title": "Master Google Cloud (GCP) Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "title": "Master Microsoft Azure Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 4,
+              "title": "Containerize Apps using Docker",
+              "resource": "Docker Mastery course on Udemy",
+              "duration": "1 week",
+              "completed": false
+            },
+            {
+              "step": 5,
+              "title": "Kubernetes Cluster Management & Pods",
+              "resource": "CKA Course on KodeKloud",
+              "duration": "3 weeks",
+              "completed": false
+            },
+            {
+              "step": 6,
+              "title": "Infrastructure as Code with Terraform",
+              "resource": "HashiCorp Learning Labs",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 7,
+              "title": "Master Linux Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            }
+          ]
+        },
+        "devops-engineer": {
+          "matchPercentage": 35,
+          "missingSkills": [
+            "Docker",
+            "Kubernetes",
+            "Terraform",
+            "Ansible",
+            "Jenkins",
+            "CI/CD Pipelines",
+            "Git",
+            "Linux"
+          ],
+          "roadmap": [
+            {
+              "step": 1,
+              "title": "Containerize Apps using Docker",
+              "resource": "Docker Mastery course on Udemy",
+              "duration": "1 week",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "title": "Kubernetes Cluster Management & Pods",
+              "resource": "CKA Course on KodeKloud",
+              "duration": "3 weeks",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "title": "Infrastructure as Code with Terraform",
+              "resource": "HashiCorp Learning Labs",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 4,
+              "title": "Master Ansible Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 5,
+              "title": "Master Jenkins Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 6,
+              "title": "Automated Workflows via GitHub Actions",
+              "resource": "GitHub Actions Learning Path",
+              "duration": "1 week",
+              "completed": false
+            },
+            {
+              "step": 7,
+              "title": "Master Git Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 8,
+              "title": "Master Linux Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            }
+          ]
+        },
+        "data-analyst": {
+          "matchPercentage": 35,
+          "missingSkills": [
+            "SQL",
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Tableau",
+            "Power BI"
+          ],
+          "roadmap": [
+            {
+              "step": 1,
+              "title": "Relational DB Schemas & SQL Queries",
+              "resource": "LeetCode Database Problems",
+              "duration": "1 week",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "title": "Master Python Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "title": "Master Pandas Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 4,
+              "title": "Master NumPy Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 5,
+              "title": "Master Tableau Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 6,
+              "title": "Master Power BI Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            }
+          ]
+        },
+        "ai-ml-engineer": {
+          "matchPercentage": 35,
+          "missingSkills": [
+            "Python",
+            "PyTorch",
+            "TensorFlow",
+            "Scikit-Learn",
+            "NumPy",
+            "Pandas"
+          ],
+          "roadmap": [
+            {
+              "step": 1,
+              "title": "Master Python Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 2,
+              "title": "Master PyTorch Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 3,
+              "title": "Master TensorFlow Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 4,
+              "title": "Master Scikit-Learn Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 5,
+              "title": "Master NumPy Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            },
+            {
+              "step": 6,
+              "title": "Master Pandas Core Concepts",
+              "resource": "Udemy / Coursera official tracks",
+              "duration": "2 weeks",
+              "completed": false
+            }
+          ]
+        }
+      },
+      "id": "res_1"
+    }
+  ],
+  "users": [],
+  "stats": {
+    "total_users": 1,
+    "total_resumes": 1,
+    "avg_ats_score": 69.0
+  }
+}
